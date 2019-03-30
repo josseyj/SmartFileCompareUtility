@@ -6,3 +6,9 @@ So the utility implementation was updated to use some repository abstractions to
 
 There is an in-memory repository implementation that stores the records and results in local hashmaps is included in this solution. 
 But we can switch it with repository implementation backed by a DB and the compare-utility need not be changed.
+
+Usage:
+```
+SmartFileComparisonUtility utility = new SmartFileComparisonUtility(recordRepository, comparisonResultRepository);
+smartFileComparisonUtility.compareAndGenerateReport(expectedFilePath, actualFilePath, outputPath);
+```
